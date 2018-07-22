@@ -1,5 +1,6 @@
 package gmarkiewicz.tablice;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class ArrayHelper<T> {
@@ -17,10 +18,37 @@ public class ArrayHelper<T> {
     public int[] fill(int length, int a, int b) {
         int[] intArray = new int[length];
         Random random = new Random();
-        
+
         for (int i = 0; i < intArray.length; i++) {
             intArray[i] = random.nextInt(b - a + 1) + a;
         }
         return intArray;
     }
+
+    /*public int arrayChanger(int[] input) {
+        int sum = 0;
+        int[] modifiedArray = input;
+        for (int i = 0; i < input.length; i++) {
+            modifiedArray[i] = i;
+        }
+        int[] tempArray = modifiedArray;
+        System.out.println(Arrays.toString(modifiedArray));
+        for (int j = 0; j < input.length; j++) {
+            if (j % 2 == 0) {
+                tempArray[j] = modifiedArray[j] / 2;
+            } else {
+                if (modifiedArray[j] - 2 < 0) {
+                    tempArray[j] = modifiedArray[j];
+                } else {
+                    tempArray[j] = modifiedArray[j] + modifiedArray[j - 2];
+                }
+            }
+        }
+        System.out.println(Arrays.toString(tempArray));
+
+        for (int num : tempArray) {
+            sum += num;
+        }
+        return sum;
+    }*/
 }

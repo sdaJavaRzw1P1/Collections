@@ -29,4 +29,9 @@ public class ArrayHelperTest {
 
         System.out.println(Arrays.toString(randomArray));
     }
+
+    @Test
+    public void arrayChanger() {
+
+    }
 }
