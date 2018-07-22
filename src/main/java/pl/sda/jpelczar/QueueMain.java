@@ -3,8 +3,16 @@ package pl.sda.jpelczar;
 public class QueueMain {
 
     public static void main(String[] args) {
-        Queue<Integer> queue = new QueueImpl<>();
+        System.out.println("***************QueueImpl*****************");
+        System.out.println();
+        performQueueOperations(new QueueImpl<>());
+        System.out.println("***************QueueArray*****************");
+        System.out.println();
+        performQueueOperations(new QueueArray<>());
+    }
 
+
+    private static void performQueueOperations(Queue<Integer> queue) {
         System.out.println("queue = " + queue);
         queue.push(0);
         System.out.println("queue = " + queue);
