@@ -13,7 +13,7 @@ public class Ryze {
     }
 
 
-    int dajMnieRyz(int ile) {
+    boolean dajMnieRyz(int ile) {
 
         if (mamyTyżu - ile >= 0) {
             mamyTyżu -= ile;
@@ -23,10 +23,11 @@ public class Ryze {
                 paczka1 += paczka5;
                 paczka5 = 0;
             }
-            return ile;
+            System.out.println("Masz pan ryzu: "+ile);
+            return true;
         } else {
             System.out.println("ni ma ryzu");
-            return 0;
+            return false;
         }
 
     }
