@@ -3,6 +3,8 @@ package gmarkiewicz.tablice;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class ArrayHelperTest {
@@ -18,5 +20,13 @@ public class ArrayHelperTest {
         Integer[] swapResult = arrayHelper.swap(a1, 0, 3);
 
         Assert.assertArrayEquals(new Integer[]{3, 1, 2, 0, 4}, swapResult);
+    }
+
+    @Test
+    public void testFill() {
+        ArrayHelper<Integer> arrayHelper = new ArrayHelper<>();
+        int[] randomArray = arrayHelper.fill(5, 5, 8);
+
+        System.out.println(Arrays.toString(randomArray));
     }
 }
