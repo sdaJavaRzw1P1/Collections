@@ -10,12 +10,12 @@ public class QueueImpl<T> implements Queue<T> {
         Item newTail = new Item();
         newTail.value = item;
 
-        if (tail == null && head == null) {
+        if (head == null && tail == null) {
             tail = newTail;
-            head = tail;
+            head = newTail;
         } else if (head == tail) {
             tail = newTail;
-            head.next = tail;
+            head.next = newTail;
         } else {
             tail.next = newTail;
             tail = newTail;
@@ -29,6 +29,7 @@ public class QueueImpl<T> implements Queue<T> {
         }
 
         T value = head.value;
+
         head = head.next;
 
         if (head == null) {
@@ -68,6 +69,7 @@ public class QueueImpl<T> implements Queue<T> {
         public String toString() {
             return "Item{" +
                     "value=" + value +
+                    ", next=" + next +
                     '}';
         }
     }
