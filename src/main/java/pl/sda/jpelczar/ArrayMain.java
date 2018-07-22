@@ -2,6 +2,7 @@ package pl.sda.jpelczar;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.stream.IntStream;
 
 public class ArrayMain {
 
@@ -30,6 +31,34 @@ public class ArrayMain {
 
         System.out.println(Arrays.toString(array));
         System.out.println(Arrays.toString(arrayHelper.createAndFillArray(n, a, b)));
+
+        System.out.println(executeOperation(10));
+
+    }
+
+    public static int executeOperation(int size) {
+        int[] array = IntStream.range(0, size).toArray();
+//        for (int i = 0; i < size; i++) {
+//            array[i] = i;
+//        }
+        int[] result = new int[size]; //{0, 0, 0, 0 ,0 ,0, 0 ,0 ,0 ,0}
+        for (int i = 0; i < size; i++) {
+            if (i % 2 == 0) {
+                result[i] = array[i] / 2; //{0, 1, 1, 3, 2, 5, 3, 7, 4, 9}
+                continue;
+            }
+            if (i - 2 < 0) {
+                result[i] = array[i];
+                continue;
+            }
+
+            result[i] = array[i] + array[i - 2]; // {0, 1, 1, 4, 2, 8, 3, 12, 4, 16}
+        }
+
+        System.out.println("*********************");
+        System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(result));
+        return Arrays.stream(result).sum();
     }
 
 }
