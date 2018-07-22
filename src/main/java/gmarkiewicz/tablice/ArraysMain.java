@@ -32,6 +32,7 @@ public class ArraysMain {
         for (int num : tempArray) {
             sum += num;
         }
+
         return sum;
     }
 }
