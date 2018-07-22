@@ -1,4 +1,4 @@
-package pl.sda.example;
+package pl.sda;
 
 
 import org.junit.Assert;

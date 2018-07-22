@@ -1,4 +1,4 @@
-package pl.sda.example;
+package pl.sda;
 
 public class Example {
 }
