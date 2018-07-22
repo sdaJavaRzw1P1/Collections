@@ -22,8 +22,13 @@ public class Ryze {
             if (paczka5 < 0) {
                 paczka1 += paczka5;
                 paczka5 = 0;
+
             }
-            System.out.println("Masz pan ryzu: "+ile);
+            if (paczka1 < 0) {
+                System.out.println("Nie mozna tak dobrac paczek");
+                return false;
+            }
+            System.out.println("Masz pan ryzu: " + ile);
             return true;
         } else {
             System.out.println("ni ma ryzu");
