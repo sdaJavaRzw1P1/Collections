@@ -25,17 +25,7 @@ public class QueueMain {
         queue.push(4);
         System.out.println("queue = " + queue);
 
-        //4
-        System.out.println("value = " + queue.peek());
-        System.out.println("queue poll = " + queue.poll());
-        System.out.println("queue = " + queue);
-
-        //3
-        System.out.println("value = " + queue.peek());
-        System.out.println("queue poll = " + queue.poll());
-        System.out.println("queue = " + queue);
-
-        //2
+        //0
         System.out.println("value = " + queue.peek());
         System.out.println("queue poll = " + queue.poll());
         System.out.println("queue = " + queue);
@@ -45,7 +35,17 @@ public class QueueMain {
         System.out.println("queue poll = " + queue.poll());
         System.out.println("queue = " + queue);
 
-        //0
+        //2
+        System.out.println("value = " + queue.peek());
+        System.out.println("queue poll = " + queue.poll());
+        System.out.println("queue = " + queue);
+
+        //3
+        System.out.println("value = " + queue.peek());
+        System.out.println("queue poll = " + queue.poll());
+        System.out.println("queue = " + queue);
+
+        //4
         System.out.println("value = " + queue.peek());
         System.out.println("queue poll = " + queue.poll());
         System.out.println("queue = " + queue);
