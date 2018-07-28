@@ -1,4 +1,4 @@
-package gmarkiewicz.tablice;
+package gmarkiewicz;
 
 import java.util.Arrays;
 import java.util.Random;

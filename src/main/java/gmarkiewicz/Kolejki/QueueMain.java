@@ -1,4 +1,4 @@
-package gmarkiewicz.tablice.Kolejki;
+package gmarkiewicz.Kolejki;
 
 public class QueueMain {
     public static void main(String[] args) {

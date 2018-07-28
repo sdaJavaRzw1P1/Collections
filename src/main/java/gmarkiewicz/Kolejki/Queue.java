@@ -1,4 +1,4 @@
-package gmarkiewicz.tablice.Kolejki;
+package gmarkiewicz.Kolejki;
 
 public interface Queue <T> {
 

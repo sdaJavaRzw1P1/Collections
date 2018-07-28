@@ -1,4 +1,4 @@
-package gmarkiewicz.tablice.Stosy;
+package gmarkiewicz.Stosy;
 
 public class StackMain {
     public static void main(String[] args) {
