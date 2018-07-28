@@ -10,6 +10,7 @@ public class QueueImpl<T> implements Queue<T> {
         Item newTail = new Item();
         newTail.value = item;
 
+        //Dlaczego to sprawdzam
         if (head == null && tail == null) {
             tail = newTail;
             head = newTail;
