@@ -1,6 +1,10 @@
 package gmarkiewicz.Homework.BTS;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree<T extends Comparable> {
+    protected Queue<Node> treeQueue = new LinkedList<>();
     private Node root;
 
     public  void add(T value){
@@ -17,6 +21,9 @@ public class BinarySearchTree<T extends Comparable> {
 
     public void postOrder(){
         postOrder(root);
+    }
+    public void breadthFirstSearch(){
+        breadthFirstSearch(root);
     }
 
     private void preOrder(Node node){
@@ -49,10 +56,25 @@ public class BinarySearchTree<T extends Comparable> {
         System.out.println(node.value);
     }
 
+    private void breadthFirstSearch(Node node){
+        if(node != null) {
+            if (node.left != null) {
+                treeQueue.add(node.left);
+            }
+            if (node.right != null) {
+                treeQueue.add(node.right);
+            }
+        }
+        System.out.println(node.value);
+        if (!treeQueue.isEmpty()) {
+            breadthFirstSearch(treeQueue.poll());
+        }
+    }
+
     private void insert(Node parent, T k){
         if (root == null){
             root = new Node(k);
-        } else if (k.compareTo(parent.value) < 0){
+        } else if (k.compareTo(parent.value) <= 0){
             if (parent.left == null){
                 parent.left = new Node(k);
             } else {

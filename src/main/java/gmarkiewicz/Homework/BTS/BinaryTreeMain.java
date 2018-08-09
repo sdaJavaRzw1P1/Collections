@@ -8,8 +8,12 @@ public class BinaryTreeMain {
         main.prepare();
 
         main.binarySearchTree.preOrder();
+        System.out.println();
         main.binarySearchTree.inOrder();
+        System.out.println();
         main.binarySearchTree.postOrder();
+        System.out.println();
+        main.binarySearchTree.breadthFirstSearch();
     }
 
     public void prepare(){
